@@ -4,7 +4,7 @@ Você pode importar dados de um arquivo
 
 ```PGSQL
 CREATE TABLE MyTable (...);
-COPY MyTable FROM 'export.txt' (DELIMITER('|'));
+COPY MyTable FROM 'export.txt' (HEADER true, DELIMITER('|'));
 ```
 
 # CSV
