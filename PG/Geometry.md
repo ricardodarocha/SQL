@@ -1,6 +1,6 @@
 ![](Geometry.png)
 
-From **Peter Gleeson** https://www.freecodecamp.org/news/postgresql-tricks/
+From **Peter Gleeson**  https://www.freecodecamp.org/news/postgresql-tricks/
 NOVEMBER 18, 2019
 
 Points are the basic building block for all geometric data types in PostgreSQL. They are represented as (x, y) coordinates.
