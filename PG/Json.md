@@ -161,3 +161,7 @@ https://github.com/ricardodarocha/DiasUteisPG
 ## Outros links
 
 [**PostgreSQL JSON cheatsheet**](https://devhints.io/postgresql-json)
+
+**Documentação oficial**
+[Functions](https://www.postgresql.org/docs/current/static/functions-json.html)
+[Tipos](https://www.postgresql.org/docs/current/static/datatype-json.html)
