@@ -1,7 +1,7 @@
 # JSON
 
 Neste tutorial eu mostro como trabalhar com Json utilizando o PostgreSQL.
-Acesse o fonte [Json.SQL](/SQL/PG/Json.SQL)
+Acesse o fonte [Json.SQL](/PG/Json.SQL)
 
 ## Introdução
 
