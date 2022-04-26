@@ -42,26 +42,26 @@ There are many functions and operators that can be applied to geometric data in 
 
 You can:
 
-Check if two lines are parallel with the ?|| operator:
+Check if two lines are parallel with the `?||` operator:
 ```PGSQL
 SELECT
   LINE '((0,0),(1,1))' ?|| LINE '((2,3),(3,4))';
 ```
 
-Find the distance between two objects with the <-> operator:
+Find the distance between two objects with the `<->` operator:
 
 ```PGSQL
 SELECT 
   POINT(0,0) <-> POINT(1,1);
 ```
 
-Check if two shapes overlap at any point with the && operator:
+Check if two shapes overlap at any point with the `&&` operator:
 
 ```PGSQL
 SELECT
   CIRCLE '((0,0),1)' &&  CIRCLE '((1,1),1)';
 ```
-Translate (shift position) a shape using the + operator:
+Translate (shift position) a shape using the `+` operator:
 
 ```PGSQL
 SELECT
