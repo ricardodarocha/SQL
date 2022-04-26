@@ -1,4 +1,4 @@
-![geometry.png]()
+![](Geometry.png)
 
 From **Peter Gleeson** https://www.freecodecamp.org/news/postgresql-tricks/
 NOVEMBER 18, 2019
