@@ -153,7 +153,7 @@ select row_to_json(rowset) from
 # Referências externas
 
 Quer aprender mais sobre json, eu recomendo ler meu artigo no Medium
-https://rickrochaso.medium.com/c%C3%A1lculo-dos-dias-%C3%BAteis-no-postgresql-76be47470647
+[**Cálculo dos dias úteis com Postgre**](https://rickrochaso.medium.com/c%C3%A1lculo-dos-dias-%C3%BAteis-no-postgresql-76be47470647)
 
 Repositório do GitHub
 https://github.com/ricardodarocha/DiasUteisPG
