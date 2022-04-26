@@ -160,4 +160,4 @@ https://github.com/ricardodarocha/DiasUteisPG
 
 ## Outros links
 
-[**PostgreSQL JSON cheatsheet**]https://devhints.io/postgresql-json
+[**PostgreSQL JSON cheatsheet**](https://devhints.io/postgresql-json)
