@@ -165,7 +165,7 @@ alter table Lanca add constraint fkplano foreign key(plano) references plano(id)
      /*
      
 
-     sintetico|analitico  |nivel|descricao                      |valor |sinal|
+sintetico|analitico  |nivel|descricao                      |valor |sinal|
 ---------|-----------|-----|-------------------------------|------|-----|
          1|01        |    1|RECEITA                        |220.00|(+)  |
          2|01.01     |    2|  RECEITA OPERACIONAL          |170.00|(+)  |
