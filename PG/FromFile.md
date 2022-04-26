@@ -1,5 +1,12 @@
 Você pode importar dados de um arquivo
 
+# TXT
+
+```PGSQL
+CREATE TABLE MyTable (...);
+COPY MyTable FROM 'export.txt' (DELIMITER('|'));
+```
+
 # CSV
 
 ```PGSQL
