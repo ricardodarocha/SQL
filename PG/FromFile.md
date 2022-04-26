@@ -17,8 +17,8 @@ COPY revenue FROM '~/Projects/datasets/revenue.csv' WITH HEADER CSV;
 
 From Aleksander Piotrowski*  
 https://tech.ingrid.com/postgres-til-datatypes-array-json/  
-Oct 8, 2021 
-Checkout the article to see other examples  
+Oct 8, 2021  
+*Checkout the article to see other examples  
 
 Initialize database data from JSON file
 Using JSON as your initial data source for the table is more straight forward than you may think. All you have to do is listed below:
