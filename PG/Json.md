@@ -1,6 +1,6 @@
 # JSON
 
-Neste tutorial eu mostro como trabalhar com Json utilizando o PostgreSQL.
+Neste tutorial eu mostro como trabalhar com Json utilizando o **PostgreSQL**.
 Acesse o fonte [Json.SQL](https://github.com/ricardodarocha/SQL/blob/main/PG/Json.sql)
 
 ## Introdução
