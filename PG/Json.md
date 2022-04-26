@@ -80,7 +80,7 @@ INSERT INTO pedido_test (cliente, itens) VALUES
 SELECT * FROM cliente INNER JOIN PEDIDO ON cliente.id = pedido.cliente
 ```
 
-| id  | nome                | endereco        | id  | cliente | data                     | itens                                           |
+| id  | nome                | endereco        | pedido  | cliente | data                     | itens                                           |
 | --- | ------------------- | --------------- | --- | ------- | ------------------------ | ----------------------------------------------- |
 | 2   | Samsung Electronics | [object Object] | 1   | 2       | 2022-04-26T00:00:00.000Z | [object Object],[object Object],[object Object] |
 
