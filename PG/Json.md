@@ -157,3 +157,7 @@ Quer aprender mais sobre json, eu recomendo ler meu artigo no Medium
 
 Repositório do GitHub
 https://github.com/ricardodarocha/DiasUteisPG
+
+## Outros links
+
+[**PostgreSQL JSON cheatsheet**]https://devhints.io/postgresql-json
