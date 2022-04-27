@@ -3,6 +3,10 @@
 **string_agg()** combines non-null values into one string, separated by the delimiter character that you specify in the second parameter. 
 For example, in the Sakila database there's a city and a country table. If you want to show the available cities per country in one line, separated by commas:
 
+country               |             cities             
+----------------------|--------------------------------
+ Thailand             | Nakhon Sawan,Pak Kret,Songkhla
+
 This is a table for a travelling agency
 
 ```mermaid
