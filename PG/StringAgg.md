@@ -33,9 +33,9 @@ limit 4;
 
 country                |             cities             
 -----------------------|--------------------------------
-| Thailand             | Songkhla,Nakhon Sawan,Pak Kret
+| Thailand             | Songkhla, Nakhon Sawan, Pak Kret
 | Faroe Islands        | Trshavn
-| Bangladesh           | Jamalpur,Tangail,Dhaka
+| Bangladesh           | Jamalpur, Tangail, Dhaka
 | United States        | Springfield, Springfield
  
 Note that PostgreSQL does not assume a default delimiter. You need to specify it as the second parameter. Also note that like other aggregate functions, you must use the group by clause with string_agg().
@@ -46,7 +46,7 @@ Notice that in our results, there are multiple cities in the United States named
 ```PGSQL
 select
   country,
-  string_agg(distinct city, ',') as cities
+  string_agg(distinct city, ', ') as cities
 from country
 join city using (country_id)
 group by country
@@ -55,9 +55,9 @@ limit 4;
 
 country               |             cities             
 ----------------------|--------------------------------
- Thailand             | Songkhla,Nakhon Sawan,Pak Kret
+ Thailand             | Songkhla, Nakhon Sawan, Pak Kret
  Faroe Islands        | Trshavn
- Bangladesh           | Jamalpur,Tangail,Dhaka
+ Bangladesh           | Jamalpur, Tangail, Dhaka
  United States        | Springfield
  
 Ordering the contents within the output string
@@ -66,7 +66,7 @@ Perhaps you also want the output of the `string_agg()` function to be ordered al
 ```PGSQL
 select
   country,
-  string_agg(distinct city, ',' order by city asc) as cities
+  string_agg(distinct city, ', ' order by city asc) as cities
 from country
 join city using (country_id)
 group by country
@@ -75,9 +75,9 @@ limit 4;
 
 country               |             cities             
 ----------------------|--------------------------------
- Thailand             | Nakhon Sawan,Pak Kret,Songkhla
+ Thailand             | Nakhon Sawan, Pak Kret, Songkhla
  Faroe Islands        | Trshavn
- Bangladesh           | Dhaka,Jamalpur,Tangail
+ Bangladesh           | Dhaka, Jamalpur, Tangail
  United States        | Springfield
  
 This can be helpful for particular long outputs, but the order by clause is optional.
