@@ -5,7 +5,7 @@ For example, in the Sakila database there's a city and a country table. If you w
 
 country               |             cities             
 ----------------------|--------------------------------
- Thailand             | Nakhon Sawan,Pak Kret,Songkhla
+ Thailand             | Nakhon Sawan, Pak Kret, Songkhla
 
 This is a table for a travelling agency
 
