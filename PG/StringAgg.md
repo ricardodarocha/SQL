@@ -24,7 +24,7 @@ CREATE TABLE agency_city
 
 select
   country,
-  string_agg(city, ',') as cities
+  string_agg(city, ', ') as cities
 from agency_coutry as country
 join agency_city as city using (country_id)
 group by country
