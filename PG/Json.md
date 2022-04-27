@@ -27,7 +27,7 @@ Feature                     | JSON                      | JSONB
 ----------------------------|---------------------------|-------------------------------------
 Storage                     | Stored exactly as entered | Stored in a decomposed binary format
 Supports full text indexing | No                        | Yes
-reserve white spaces        | Yes                       | No
+reserve white spaces        | Yes                       | No. It's removed
 Preserve order of keys      | Yes                       | Yes
 Keep duplicate keys         | No                        | (last value is kept)
 
