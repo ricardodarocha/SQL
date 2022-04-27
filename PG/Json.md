@@ -19,8 +19,8 @@ Neste artigo eu explico todos estes formatos.
 
 O PostgreSQL possui dois **tipos nativos** para você armazenar objetos JSON. `JSON` e `JSONB`, Sendo o `JSON` o tipo mais simples e `JSONb` um formato binário otimizado, ideal para realizar buscas ou para compactar a base de dados.
 
-_from Ben Brumm_  
-https://www.databasestar.com/postgresql-json/
+_Ben Brumm_ oferece a seguinte comparação   
+(https://www.databasestar.com/postgresql-json/)
 
 
 Feature                     | JSON                      | JSONB
