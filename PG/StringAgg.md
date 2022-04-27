@@ -1,7 +1,11 @@
 # string_agg
 
-**string_agg()** combines non-null values into one string, separated by the delimiter character that you specify in the second parameter. 
-For example, in the Sakila database there's a city and a country table. If you want to show the available cities per country in one line, separated by commas:
+from _popsql_  
+https://popsql.com/learn-sql/postgresql/how-to-use-stringagg-in-postgresql  
+2022
+
+**string_agg()** combines _non-null_ values into one `string`, separated by the delimiter character that you specify in the second parameter. 
+For example, in the `Sakila database` there's a **city** and a **country** table. If you want to show the available cities per country in one line, separated by commas:
 
 country               |             cities             
 ----------------------|--------------------------------
