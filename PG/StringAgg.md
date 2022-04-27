@@ -27,12 +27,12 @@ group by country
 limit 4;
 ```
 
-       country        |             cities             
-----------------------+--------------------------------
- Thailand             | Songkhla,Nakhon Sawan,Pak Kret
- Faroe Islands        | Trshavn
- Bangladesh           | Jamalpur,Tangail,Dhaka
- United States        | Springfield, Springfield
+country                |             cities             
+-----------------------|--------------------------------
+| Thailand             | Songkhla,Nakhon Sawan,Pak Kret
+| Faroe Islands        | Trshavn
+| Bangladesh           | Jamalpur,Tangail,Dhaka
+| United States        | Springfield, Springfield
  
 Note that PostgreSQL does not assume a default delimiter. You need to specify it as the second parameter. Also note that like other aggregate functions, you must use the group by clause with string_agg().
 
@@ -49,8 +49,8 @@ group by country
 limit 4;
 ```
 
-       country        |             cities             
-----------------------+--------------------------------
+country               |             cities             
+----------------------|--------------------------------
  Thailand             | Songkhla,Nakhon Sawan,Pak Kret
  Faroe Islands        | Trshavn
  Bangladesh           | Jamalpur,Tangail,Dhaka
@@ -69,8 +69,8 @@ group by country
 limit 4;
 ```
 
-       country        |             cities             
-----------------------+--------------------------------
+country               |             cities             
+----------------------|--------------------------------
  Thailand             | Nakhon Sawan,Pak Kret,Songkhla
  Faroe Islands        | Trshavn
  Bangladesh           | Dhaka,Jamalpur,Tangail
