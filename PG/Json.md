@@ -31,8 +31,6 @@ reserve white spaces        | Yes                       | No. It's removed
 Preserve order of keys      | Yes                       | Yes
 Keep duplicate keys         | No                        | (last value is kept)
 
- 
-
 ### TYPE JSON
 
 Este tipo é recomendado para JSON pequenos que não envolva muitos dados. Por exemplo se você tiver muitas linhas ou muitas colunas em um mesmo documento este formato não é recomendado.
@@ -83,7 +81,7 @@ CREATE TABLE pedido_test (
 
 INSERT INTO cliente_test (nome, endereco) VALUES 
     ('Amazon.com, Inc', '{"address":"410 Terry Ave N", "ciy":"Seattle", "PostalCode":98109, "state":"Washington", "country":"United States"}'),
-    ('Samsung Electronics', '{"address":"Samsung-ro 129, Yeongtong-gu", "ciy":"Suwon-si", "state":"Gyeonggi-do", "country":"Soulth Corea", "telefone":"031-200-3113"}'),
+    ('Samsung Electronics', '{"address":"Samsung-ro 129, Yeongtong-gu", "ciy":"Suwon-si", "state":"Gyeonggi-do", "country":"Soulth Korea", "telefone":"031-200-3113"}'),
     ('Broadcom Corporation Jobs', '{"address":"1320 Ridder Park Drive", "ciy":"San Jose", "state":"California", "country":"United States", "telefone":"1-408-433-8000"}'),
     ('Nvidia Corporation', '{"address":"2701 San Tomas Expressway", "ciy":"Santa Clara", "state":"California", "country":"United States", "telefone": "1+ (408) 486-2000"}');
 
@@ -164,6 +162,23 @@ select row_to_json(rowset) from
     }
 ]
 ```
+# Acessando atributos
+
+```PGSQL
+SELECT
+id,
+nome,
+endereco -> 'country' AS country,
+endereco ->> 'country' AS country_value
+FROM cliente_test;
+```
+|id|nome        |country  | country_value               |
+|--|------------|---------|-----------------------------|
+|1 |  Amazon    | “United States” |    United States    |
+|2 |  Samsung   |  "South Korea"  |    South Korea      |
+|3 |  BroadCom  | “United States” |    United States    |
+|4 |  Nvidia    | “United States” |    United States    |
+
 
 # Referências externas
 
