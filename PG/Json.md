@@ -162,6 +162,15 @@ select row_to_json(rowset) from
     }
 ]
 ```
+
+# Acessando um endereço em cada coluna
+
+Supondo que voce queira trabalhar com um array de contatos e queira recuperar os dois principais contatos em colunas distintas
+```
+select Nome, Telefone[1] as  principal, Telefone[2] as secundario, array_to_string(Telefone[3:],',') demais from (
+select Nome, Telefone::text[] from (Values ('Zé','{3344-5566,98765-4321}'),('Tonho','{4455-6677,99887-6655,9879-8787}')) as x(Nome, Telefone)) x
+```
+
 # Acessando atributos
 
 ```PGSQL
