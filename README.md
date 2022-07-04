@@ -1,8 +1,8 @@
 # SQL
-Serie of SQL scripts with different proposals
 
-Check the version of Database.
+Uma série de scrips SQL com diferentes propósitos
 
+Para verificar a versão do banco de dados:
 **PostgreSQL**
 ``` sql
 SELECT version();
