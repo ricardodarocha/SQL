@@ -32,7 +32,7 @@ create table Status (
 ID SERIAL primary key, 
 Nome VARCHAR );
 
-create table Venda	(
+create table Venda (
 Id SERIAL primary key, 
 Cliente int4,
 Data Timestamp,
@@ -71,7 +71,7 @@ Descricao varchar,
 FOREIGN KEY (Imposto) references Imposto(ID),
 FOREIGN KEY (categoria) references Categoria(ID) ) ;
 
-create table Item	(
+create table Item (
 ID SERIAL primary key, 
 Venda int4 ,
 Produto int4 ,
