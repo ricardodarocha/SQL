@@ -29,8 +29,8 @@ Cidade int4 ,
 FOREIGN KEY (Cidade) REFERENCES Cidade(ID) );
 
 create table Status (
-ID SERIAL primary key, --	Auto-generated primary key.
-Nome VARCHAR );--	Short Nome of the status (e.g., new, processed).
+ID SERIAL primary key, 
+Nome VARCHAR );
 
 create table Venda	(
 Id SERIAL primary key, 
@@ -51,28 +51,28 @@ Pago Numeric(15,2) ,
 FOREIGN KEY (venda) REFERENCES Venda(ID));
 
 create table Categoria ( 
-ID SERIAL primary key, --	Auto-generated primary key.
-Nome VARCHAR ,--	Nome of the category, e.g., toys, LEGO, etc.
+ID SERIAL primary key,
+Nome VARCHAR ,
 Grupo int4 ,
-foreign key (grupo) references Categoria(ID));--	Foreign key indicating the parent category; null if this is a top-level category.
+foreign key (grupo) references Categoria(ID));
 
 create table Imposto (
 Id VARCHAR NOT NULL PRIMARY KEY,
 Taxa NUMERIC(15,2) );
 
 create table Produto (
-ID SERIAL primary key, --	Auto-generated primary key.
-Nome VARCHAR, --		Product Nome.
-Preco	NUMERIC(15,2), -- Product price without tax.
-Quantidade NUMERIC(15,2), --	Amount of this product in stock.
-Imposto VARCHAR,  --	Foreign key to the VAT table.
-Categoria int4, --	Foreign key to the category table. 
+ID SERIAL primary key,
+Nome VARCHAR,
+Preco	NUMERIC(15,2),
+Quantidade NUMERIC(15,2),
+Imposto VARCHAR, 
+Categoria int4, 
 Descricao varchar,
 FOREIGN KEY (Imposto) references Imposto(ID),
 FOREIGN KEY (categoria) references Categoria(ID) ) ;
 
 create table Item	(
-ID SERIAL primary key, --	Auto-generated primary key.
+ID SERIAL primary key, 
 Venda int4 ,
 Produto int4 ,
 Quantidade NUMERIC(15,2), 
