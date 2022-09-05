@@ -42,6 +42,7 @@ foreign key (cliente) references Cliente(ID),
 FOREIGN KEY (Status) REFERENCES Status(ID) );
 
 create table Pagamento (
+Id SERIAL primary key,
 Venda int4,
 Nome VARCHAR, 
 Vencimento DATE,
