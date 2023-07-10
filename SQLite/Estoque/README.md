@@ -34,6 +34,13 @@ CREATE TABLE estoque (
 ```
 
 3. Ao inserir um lançamento, deverão ser alimentados apenas os campos prod (código do produto), entrada e saída.
+```sql
+INSERT INTO estoque (PROD, ENTRADA, SAIDA) VALUES (:PROD, 1000, 0);
+INSERT INTO estoque (PROD, ENTRADA, SAIDA) VALUES (:PROD, 29, 0);
+INSERT INTO estoque (PROD, ENTRADA, SAIDA) VALUES (:PROD, 112, 0);
+INSERT INTO estoque (PROD, ENTRADA, SAIDA) VALUES (:PROD, 55, 0);
+INSERT INTO estoque (PROD, ENTRADA, SAIDA) VALUES (:PROD, 54, 0);
+```
 4. O campo saldo_ini deve ser omitido
 5. O campo data poderá ser oimitido, pois será gerado automaticamente
 6. O campo seq deverá ser oimitido, pois será gerado automaticamente
