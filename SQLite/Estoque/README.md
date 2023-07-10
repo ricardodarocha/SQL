@@ -74,3 +74,35 @@ Rode o seguinte script várias vezes. O saldo inicial de um produto deverá coin
 ```SQL
 INSERT INTO estoque (PROD, ENTRADA, SAIDA) VALUES (:PROD, abs(random() % 9), abs(random() % 9));
 ```
+
+8. Crie uma View para mostrar os saldos dos produtos quebrando por período
+
+```Sql
+SELECT prod,  strftime('%Y-%m',data) mes,
+( 
+           SELECT saldo_ini
+             FROM estoque
+            WHERE rowid = (
+                              SELECT min(rowid) 
+                                FROM estoque sub
+                               WHERE sub.prod = master.prod and strftime('%Y-%m', sub.data) = strftime('%Y-%m', master.data)--sub.data = master.data
+                          )
+       )
+       AS saldo_ini,
+       sum(entrada) AS entradas,
+       sum(saida) AS saidas,
+       (
+           SELECT saldo_ini
+             FROM estoque
+            WHERE rowid = (
+                              SELECT max(rowid) 
+                                FROM estoque sub
+                               WHERE sub.prod = master.prod and strftime('%Y-%m', sub.data) = strftime('%Y-%m', master.data)--sub.data = master.data
+                          )
+       )
++      entrada - saida AS saldo_fim
+  FROM estoque master
+ GROUP BY prod, strftime('%Y-%m', data); --sub.data = master.data;
+
+
+```
