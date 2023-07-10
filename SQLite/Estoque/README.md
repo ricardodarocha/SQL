@@ -42,8 +42,8 @@ INSERT INTO estoque (PROD, ENTRADA, SAIDA) VALUES (:PROD, 55, 0);
 INSERT INTO estoque (PROD, ENTRADA, SAIDA) VALUES (:PROD, 54, 0);
 ```
 4. O campo saldo_ini deve ser omitido
-5. O campo data poderá ser oimitido, pois será gerado automaticamente
-6. O campo seq deverá ser oimitido, pois será gerado automaticamente
+5. O campo data poderá ser omitido, pois será gerado automaticamente
+6. O campo seq deverá ser omitido, pois será gerado automaticamente
 
 7. Após inserir, o próprio banco de dados ficará encarregado de atualizar o saldo inicial, com base no último lançamento do produto
 ```sql
