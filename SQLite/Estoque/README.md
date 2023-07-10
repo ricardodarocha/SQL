@@ -83,7 +83,7 @@ SELECT prod,  strftime('%Y-%m',data) mes,
            SELECT saldo_ini
              FROM estoque
             WHERE rowid = (
-                              SELECT min(rowid) 
+                              SELECT min(seq) 
                                 FROM estoque sub
                                WHERE sub.prod = master.prod and strftime('%Y-%m', sub.data) = strftime('%Y-%m', master.data)--sub.data = master.data
                           )
@@ -95,7 +95,7 @@ SELECT prod,  strftime('%Y-%m',data) mes,
            SELECT saldo_ini
              FROM estoque
             WHERE rowid = (
-                              SELECT max(rowid) 
+                              SELECT max(seq) 
                                 FROM estoque sub
                                WHERE sub.prod = master.prod and strftime('%Y-%m', sub.data) = strftime('%Y-%m', master.data)--sub.data = master.data
                           )
